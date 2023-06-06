@@ -12,15 +12,19 @@ public class App {
 //        System.out.println( "Hello World!" );
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-		
-		Students s1 = (Students) context.getBean("student1");		
+
+		Students s1 = (Students) context.getBean("student1");
 		System.out.println(s1);
-		
-		Students s2 = (Students) context.getBean("student2");		
+
+		Students s2 = (Students) context.getBean("student2");
 		System.out.println(s2);
-		
-		Students s3 = (Students) context.getBean("student3");		
+
+		Students s3 = (Students) context.getBean("student3");
 		System.out.println(s3);
+
+		MyCollection a1 = (MyCollection) context.getBean("employee1");
+
+		System.out.println(a1);
 
 	}
 }

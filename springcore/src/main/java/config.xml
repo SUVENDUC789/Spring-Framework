@@ -7,9 +7,38 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<bean class="com.springcore.springcore.MyCollection"
+		name="employee1">
+		<property name="name" value="Supratim Majumder" />
+
+		<property name="phone">
+			<list>
+				<value>9674289220</value>
+				<value>8697757110</value>
+				<value>8981702261</value>
+				<null/>
+			</list>
+		</property>
+
+		<property name="address">
+			<set>
+				<value>Dunlop</value>
+				<value>BT Road</value>
+			</set>
+		</property>
+
+		<property name="course">
+			<map>
+				<entry key="Python" value="1 Month" />
+				<entry key="Java" value="1 Year" />
+			</map>
+		</property>
+	</bean>
+
 
 	<!-- Fast Bean -->
-	<bean class="com.springcore.springcore.Students" name="student1" p:roll="412" p:name="Rahul" p:marks="76" />
+	<bean class="com.springcore.springcore.Students" name="student1"
+		p:roll="412" p:name="Rahul" p:marks="76" />
 
 
 	<!-- Second Bean -->
