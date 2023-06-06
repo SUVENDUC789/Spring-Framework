@@ -2,24 +2,28 @@
 
 
 <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean class="com.springcore.springcore.Students" name="student1">
-		<property name="roll">
-			<value>412</value>
-		</property>
+	<!-- Fast Bean -->
+	<bean class="com.springcore.springcore.Students" name="student1" p:roll="412" p:name="Rahul" p:marks="76" />
 
-		<property name="name">
-			<value>Suvendu</value>
-		</property>
-		
-		<property name="marks">
-			<value>76.45</value>
-		</property>
 
+	<!-- Second Bean -->
+	<bean class="com.springcore.springcore.Students" name="student2">
+		<property name="roll" value="411" />
+		<property name="name" value="Supratim Majumder" />
+		<property name="marks" value="83.0" />
+	</bean>
+
+	<!-- Third Bean -->
+	<bean class="com.springcore.springcore.Students" name="student3">
+		<property name="roll" value="420" />
+		<property name="name" value="Hritik Dey" />
+		<property name="marks" value="84.0" />
 	</bean>
 
 
