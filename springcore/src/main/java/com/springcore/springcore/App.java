@@ -12,6 +12,9 @@ public class App {
 //        System.out.println( "Hello World!" );
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		
+		Suvendu suvu = (Suvendu) context.getBean("suvu");
+		System.out.println(suvu);
 
 		Students s1 = (Students) context.getBean("student1");
 		System.out.println(s1);

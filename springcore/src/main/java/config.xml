@@ -7,6 +7,25 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+	<bean class="com.springcore.springcore.Shinjini" name="sini">
+		<property name="name" value="Shinjini Bhatacharjee" />
+		<property name="clg" value="Vidyasagar College" />
+	</bean>
+
+	<bean class="com.springcore.springcore.Suvendu" name="suvu">
+		<property name="roll" value="412" />
+		<property name="name" value="Suvendu Chowdhury" />
+		
+		<!-- <property name="crush"> <ref bean="sini" /> </property> -->
+		
+		<property name="crush" ref="sini"/>
+		
+		<property name="clg" value="MMCC" />
+	</bean>
+
+
+
 	<bean class="com.springcore.springcore.MyCollection"
 		name="employee1">
 		<property name="name" value="Supratim Majumder" />
@@ -16,7 +35,7 @@
 				<value>9674289220</value>
 				<value>8697757110</value>
 				<value>8981702261</value>
-				<null/>
+				<null />
 			</list>
 		</property>
 
