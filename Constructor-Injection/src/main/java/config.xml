@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ 
+ <bean class="com.constructorInjection.Constructor_Injection.Person" name="p">
+ 
+ <constructor-arg value="Male"/>
+ <constructor-arg value="[Shinjini , Swati]"/>
+ </bean>
+
+
+	<bean
+		class="com.constructorInjection.Constructor_Injection.Students"
+		name="student1">
+		<!-- <property name="roll"> <value>412</value> </property> <property name="name"> 
+			<value>Suvendu</value> </property> -->
+			
+			<constructor-arg value="12345"/>
+			<constructor-arg value="Suvendu"/>
+			<constructor-arg ref="p"/>
+
+	</bean>
+
+
+</beans>
