@@ -15,6 +15,8 @@ public class App {
 		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 		Students student1 = (Students) context.getBean("student1");
 		System.out.println(student1);
+
+		Example ob1 = (Example) context.getBean("myexampleobj");
+		ob1.doSum();
 	}
 }
-
